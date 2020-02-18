@@ -11,12 +11,16 @@ abstract class AuthProvider {
     return EmailProvider();
   }
 
+  factory AuthProvider.facebook() {
+    return FacebookProvider();
+  }
+
   factory AuthProvider.google() {
     return GoogleProvider();
   }
 
-  factory AuthProvider.facebook() {
-    return FacebookProvider();
+  factory AuthProvider.phone() {
+    return PhoneProvider();
   }
 
   factory AuthProvider.twitter() {

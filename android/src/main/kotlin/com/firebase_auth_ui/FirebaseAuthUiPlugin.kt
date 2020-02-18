@@ -112,10 +112,11 @@ class FirebaseAuthUiPlugin(private val activity: Activity) : MethodCallHandler, 
         authProviders?.forEach {
             when (it) {
                 "password" -> providers.add(AuthUI.IdpConfig.EmailBuilder().build())
-                "google" -> providers.add(AuthUI.IdpConfig.GoogleBuilder()
-                        .build())
                 "facebook" -> providers.add(AuthUI.IdpConfig.FacebookBuilder()
                         .build())
+                "google" -> providers.add(AuthUI.IdpConfig.GoogleBuilder()
+                        .build())
+                "phone" -> providers.add(AuthUI.IdpConfig.PhoneBuilder().build())
                 "twitter" -> providers.add(AuthUI.IdpConfig.TwitterBuilder()
                         .build())
             }
